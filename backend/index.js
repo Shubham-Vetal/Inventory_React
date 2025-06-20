@@ -7,7 +7,7 @@ import itemRoutes from './routes/itemRoutes.js';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 5000; 
+
 
 connectDB(); 
 
@@ -19,9 +19,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/api/items', itemRoutes); 
 
 app.get('/', (req, res) => {
-    res.send('Item Management Backend API is running!'); // Basic route for testing
+    res.send('Item Management Backend API is running!'); 
 });
 
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+
+
+export default app; 
