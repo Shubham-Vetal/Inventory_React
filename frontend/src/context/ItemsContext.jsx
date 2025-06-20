@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const ItemsContext = createContext(undefined);
 
-const API_BASE_URL = 'http://localhost:3000/api/items';
+const API_BASE_URL = '/api/items'; 
 
 export const ItemsProvider = ({ children }) => {
   const [items, setItems] = useState([]); // Start with an empty array
