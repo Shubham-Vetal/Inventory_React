@@ -5,11 +5,11 @@ const ItemsContext = createContext(undefined);
 const API_BASE_URL = '/api/items'; 
 
 export const ItemsProvider = ({ children }) => {
-  const [items, setItems] = useState([]); // Start with an empty array
-  const [isLoading, setIsLoading] = useState(true); // Track loading state
-  const [error, setError] = useState(null); // Track errors
+  const [items, setItems] = useState([]); 
+  const [isLoading, setIsLoading] = useState(true); 
+  const [error, setError] = useState(null); 
 
-  // --- Fetch all items on component mount ---
+
   useEffect(() => {
     const fetchItems = async () => {
       setIsLoading(true);
